@@ -1,0 +1,44 @@
+:root {
+  --width-decor-page: 99%;
+}
+.todo-app {
+  padding: 16px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee;
+  word-break: break-word;
+}
+
+.todo-app__title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 100;
+  font-size: 120px;
+  color: #c080814f;
+}
+
+.todo-app__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 5px 10px 2px #cfcfcf
+}
+
+.decor-page {
+  height: 5px;
+  outline: 1px solid #cfcfcf;
+  background-color: #fff;
+}
+
+.decor-page--1 {
+  z-index: 2;
+  width: var(--width-decor-page);
+}
+
+.decor-page--2 {
+  width: calc(var(--width-decor-page) - 1%);
+}

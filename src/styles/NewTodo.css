@@ -1,0 +1,63 @@
+.todo-creation {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #cfcfcf;
+  width: 100%;
+  background-color: #fff;
+}
+
+.todo-creation__btn {
+  position: relative;
+  padding: 5px;
+  border: none;
+  min-width: 45px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.todo-creation__btn::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  top: -5px;
+  z-index: 5;
+  width: 9px;
+  height: 9px;
+  border: 4px solid #dedede;
+  border-top: transparent;
+  border-right: transparent;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-creation__btn:hover:not(:focus)::before {
+  border-color: #717171;
+  transform: rotate(315deg);
+}
+
+.todo-creation__btn:active::before {
+  border-color: #717171;
+  transform: rotate(315deg);
+}
+
+.todo-creation__input {
+  flex-grow: 1;
+  padding: 16px 8px;
+  border: none;
+  font-weight: 100;
+  font-size: 24px;
+  color: #4b4b4b;
+  background-color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-creation__input::placeholder {
+  font-weight: 100;
+  font-style: italic;
+  color: #dedede;
+}
+
+.todo-creation:has(.todo-creation__input:hover) {
+  border-bottom-color: #c080814f;
+}

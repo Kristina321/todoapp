@@ -1,0 +1,70 @@
+:root {
+  --color-grey-light: #dedede;
+  --color-green: #66bb6a;
+}
+
+.todo {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 0 5px;
+  display: flex;
+  background-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.todo__done {
+  margin: 0;
+  outline: 1px solid var(--color-grey-light);
+  border-radius: 100%;
+  min-width: 35px;
+  height: 35px;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo__mark {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 26px;
+  margin: auto;
+  border: 3px solid var(--color-green);
+  border-top: none;
+  border-right: none;
+  width: 16px;
+  height: 6px;
+  opacity: 0;
+  transform: rotate(-55deg);
+  visibility: hidden;
+}
+
+.todo__done:checked + .todo__mark {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.todo__title {
+  padding: 16px 8px;
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-weight: 400;
+  font-size: 24px;
+  color: #4b4b4b
+}
+
+.todo:has(.todo__done:checked) > .todo__title {
+  color: var(--color-grey-light);
+  text-decoration: line-through;
+}
+
+.todo:has(.todo__done:checked) > .todo__title:not(:focus) {
+  color: #dedede;
+  text-decoration: line-through;
+}
+
