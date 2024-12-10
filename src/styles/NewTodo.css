@@ -1,6 +1,5 @@
 .todo-creation {
   display: flex;
-  flex-wrap: wrap;
   border-bottom: 1px solid #cfcfcf;
   width: 100%;
   background-color: #fff;
